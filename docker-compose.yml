@@ -1,0 +1,16 @@
+services:
+  file-storage-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: file-storage-service
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./storage:/app/storage
+    environment:
+      - PORT=3001
+      - NODE_ENV=production
+      - STORAGE_PATH=/app/storage
+      - MAX_FILE_SIZE=52428800
+    restart: unless-stopped
