@@ -14,7 +14,7 @@ npm-debug.log*
 
 # Storage (local files)
 file-storage-service/storage/
-storage/
+storage/*
 
 # OS
 .DS_Store
