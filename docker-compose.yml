@@ -3,7 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: file-storage-service
+    image: file-storage-service:0.0.1
+    container_name: file-storage
     ports:
       - "3001:3001"
     volumes:
